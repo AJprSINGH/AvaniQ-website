@@ -1,13 +1,18 @@
+import ArrowMark from "./ArrowMark";
+
 export default function Intro() {
   return (
     <section className="intro section" id="about">
       <div className="index">02 / WHO WE ARE</div>
       <div className="intro-grid">
-        <h2>
-          We don&apos;t just
-          <br />
-          <span>write code.</span>
-        </h2>
+        <div className="intro-mark">
+          <h2>
+            We don&apos;t just
+            <br />
+            <span>write code.</span>
+          </h2>
+          <ArrowMark />
+        </div>
         <div>
           <p className="lead">
             We turn business ideas into digital products people understand,

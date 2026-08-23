@@ -135,6 +135,35 @@ function initSite() {
     cleanups.push(() => io.disconnect());
   });
 
+  // Arrow "A" mark: starts drawing once the intro column scrolls into view.
+  document.querySelectorAll(".intro-mark").forEach((el) => {
+    const io = new IntersectionObserver(
+      (es) => {
+        es.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("am-play");
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
+    io.observe(el);
+    cleanups.push(() => io.disconnect());
+  });
+
+  // Product cards: click or Enter/Space flips between front and back.
+  document.querySelectorAll(".flip-card").forEach((card) => {
+    const flip = () => card.classList.toggle("flipped");
+    on(card, "click", flip);
+    on(card, "keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        flip();
+      }
+    });
+  });
+
   // Magnetic buttons.
   document.querySelectorAll(".magnetic").forEach((el) => {
     on(el, "mousemove", (e) => {
