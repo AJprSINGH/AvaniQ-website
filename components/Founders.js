@@ -1,27 +1,27 @@
 const FOUNDERS = [
   {
-    initial: "T",
+    photo: "/founder-taufiq.jpg",
     num: "FOUNDER / 01",
     name: "Taufiq",
     role: "Technology & Product",
     bio: "Product-minded technologist focused on turning ambitious ideas into clear, useful digital products.",
   },
   {
-    initial: "D",
+    photo: "/founder-domenico.jpg",
     num: "FOUNDER / 02",
     name: "Domenico",
     role: "Business & Partnerships",
     bio: "Focused on partnerships, international growth and connecting strong ideas with the right opportunities.",
   },
   {
-    initial: "A",
+    photo: "/founder-ajit.jpg",
     num: "FOUNDER / 03",
     name: "Ajit",
     role: "Technology & Delivery",
     bio: "Focused on engineering, delivery and building dependable systems that work beyond the prototype.",
   },
   {
-    initial: "Y",
+    photo: "/founder-yash.jpg",
     num: "FOUNDER / 04",
     name: "Yash",
     role: "Product & Technology",
@@ -55,7 +55,12 @@ export default function Founders() {
           {FOUNDERS.map((f) => (
             <article className="founder founder-card reveal" key={f.num}>
               <div className="founder-photo">
-                <div className="photo-placeholder">{f.initial}</div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={f.photo}
+                  alt={`${f.name}, co-founder of Avaniq Softwares`}
+                  className="founder-img"
+                />
                 <span>{f.num}</span>
               </div>
               <div className="founder-copy">

@@ -86,7 +86,9 @@ footer{position:relative}
 .founder-photo{height:315px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 30%,rgba(38,230,255,.16),rgba(0,109,255,.05) 35%,#03090c 76%)}
 .founder-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,transparent 30%,rgba(38,230,255,.11),transparent 58%),repeating-linear-gradient(90deg,transparent 0 28px,rgba(38,230,255,.04) 29px 30px);transform:translateX(-20%);transition:.7s}
 .founder-card:hover .founder-photo:before{transform:translateX(20%)}
-.photo-placeholder{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:125px;height:125px;border-radius:50%;display:grid;place-items:center;font:600 58px "Space Grotesk";color:#dfffff;border:1px solid rgba(38,230,255,.55);background:radial-gradient(circle,rgba(38,230,255,.2),rgba(0,109,255,.08) 45%,transparent 70%);box-shadow:0 0 45px rgba(38,230,255,.15),inset 0 0 35px rgba(38,230,255,.08)}
+.founder-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:saturate(.92) contrast(1.05);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.founder-card:hover .founder-img{transform:scale(1.045)}
+.founder-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(3,9,12,.55),transparent 38%);pointer-events:none}
 .founder-photo>span{position:absolute;left:18px;top:18px;font:8px "Space Grotesk";letter-spacing:.15em;color:#6e8992}
 .founder-copy{padding:24px 22px 25px}
 .founder-copy small{font:8px "Space Grotesk";letter-spacing:.16em;color:#26e6ff}
