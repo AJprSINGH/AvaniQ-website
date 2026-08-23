@@ -311,9 +311,6 @@ function initSite() {
     gsap.to(".space-core", { scale: 1.25, opacity: 0.22, scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: 1 } });
     gsap.from(".intro-grid", { y: 70, opacity: 0, scrollTrigger: { trigger: ".intro", start: "top 70%", end: "top 25%", scrub: 1 } });
     gsap.from(".tech-family", { x: -40, opacity: 0, stagger: 0.08, scrollTrigger: { trigger: ".technology", start: "top 75%", end: "top 35%", scrub: 1 } });
-    gsap.from(".project", { y: 70, opacity: 0, stagger: 0.1, scrollTrigger: { trigger: ".work", start: "top 75%", end: "top 35%", scrub: 1 } });
-    gsap.from(".founder", { y: 55, opacity: 0, stagger: 0.1, scrollTrigger: { trigger: ".founders", start: "top 75%", end: "top 35%", scrub: 1 } });
-    gsap.from(".testimonial", { y: 55, opacity: 0, stagger: 0.1, scrollTrigger: { trigger: ".testimonials", start: "top 75%", end: "top 35%", scrub: 1 } });
     gsap.from(".contact-copy", { x: -60, opacity: 0, scrollTrigger: { trigger: ".contact", start: "top 70%", end: "top 30%", scrub: 1 } });
     gsap.from(".contact-form", { x: 60, opacity: 0, scrollTrigger: { trigger: ".contact", start: "top 70%", end: "top 30%", scrub: 1 } });
     cleanups.push(() => ScrollTrigger.getAll().forEach((st) => st.kill()));
