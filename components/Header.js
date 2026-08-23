@@ -2,14 +2,14 @@ export default function Header() {
   return (
     <header className="nav">
       <a className="logo" href="#home" aria-label="Avaniq Softwares home">
-        <span className="mark">
-          <i></i>
-          <i></i>
-          <i></i>
-        </span>
-        <span>
-          AVANIQ<small>SOFTWARES</small>
-        </span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/logo.png"
+          alt="Avaniq Softwares"
+          className="logo-img"
+          width="1280"
+          height="427"
+        />
       </a>
       <nav>
         <a href="#services">Services</a>
