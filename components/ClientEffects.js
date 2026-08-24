@@ -221,21 +221,28 @@ function initSite() {
     });
   }
 
-  // Mobile menu.
+  // Mobile menu: slide-in sidebar overlay.
   const menu = document.querySelector(".menu"),
-    nav = document.querySelector(".nav nav");
-  if (menu && nav) {
-    on(menu, "click", () => {
-      const open = nav.classList.toggle("mobile-open");
-      if (open) nav.style.display = "flex";
-      else nav.removeAttribute("style");
-    });
-    nav.querySelectorAll("a").forEach((a) =>
-      on(a, "click", () => {
-        nav.classList.remove("mobile-open");
-        if (innerWidth <= 900) nav.removeAttribute("style");
-      })
+    mobileNav = document.querySelector(".mobile-nav"),
+    backdrop = document.querySelector(".mobile-nav-backdrop");
+  if (menu && mobileNav && backdrop) {
+    const setMenu = (open) => {
+      document.body.classList.toggle("menu-open", open);
+      menu.setAttribute("aria-expanded", String(open));
+    };
+    on(menu, "click", () =>
+      setMenu(!document.body.classList.contains("menu-open"))
     );
+    on(backdrop, "click", () => setMenu(false));
+    mobileNav.querySelectorAll("a").forEach((a) =>
+      on(a, "click", () => setMenu(false))
+    );
+    on(window, "keydown", (e) => {
+      if (e.key === "Escape") setMenu(false);
+    });
+    on(window, "resize", () => {
+      if (innerWidth > 900) setMenu(false);
+    });
   }
 
   // Cinematic Three.js particle universe behind the page.
