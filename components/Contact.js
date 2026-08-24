@@ -1,3 +1,5 @@
+import Arrow from "./Arrow";
+
 export default function Contact() {
   return (
     <>
@@ -22,7 +24,7 @@ export default function Contact() {
             — all welcome.
           </p>
           <a className="contact-email magnetic" href="mailto:hello@avaniqsoftwares.com">
-            hello@avaniqsoftwares.com <b>↗</b>
+            hello@avaniqsoftwares.com <b><Arrow /></b>
           </a>
         </div>
         <form className="contact-form" id="contact-form">
@@ -39,7 +41,7 @@ export default function Contact() {
             <textarea required name="message" rows={5} placeholder="Tell us about the project..."></textarea>
           </label>
           <button className="submit magnetic" type="submit">
-            Send project brief <b>↗</b>
+            Send project brief <b><Arrow /></b>
           </button>
           <div className="form-status" aria-live="polite"></div>
         </form>

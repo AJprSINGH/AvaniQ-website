@@ -1,3 +1,5 @@
+import Arrow from "./Arrow";
+
 export default function Hero() {
   return (
     <section className="hero" id="home">
@@ -34,10 +36,10 @@ export default function Hero() {
         </p>
         <div className="hero-actions">
           <a href="#contact" className="button primary magnetic">
-            Start a project <b>↗</b>
+            Start a project <b><Arrow /></b>
           </a>
           <a href="#services" className="button ghost">
-            Explore what we do <b>↓</b>
+            Explore what we do <b><Arrow dir="down" /></b>
           </a>
         </div>
       </div>
