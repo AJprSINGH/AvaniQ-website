@@ -1,3 +1,5 @@
+import Arrow from "./Arrow";
+
 const FOUNDERS = [
   {
     photo: "/founder-taufiq.jpg",
@@ -68,7 +70,7 @@ export default function Founders() {
                 <h3>{f.name}</h3>
                 <p>{f.role}</p>
                 <div className="founder-bio">{f.bio}</div>
-                <div className="founder-social">LINKEDIN ↗</div>
+                <div className="founder-social">LINKEDIN <Arrow /></div>
               </div>
             </article>
           ))}

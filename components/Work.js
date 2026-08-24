@@ -1,3 +1,5 @@
+import Arrow from "./Arrow";
+
 const PRODUCTS = [
   {
     visualClass: "visual-a",
@@ -81,7 +83,7 @@ export default function Work() {
                   <div className="project-info">
                     <small>{p.tag}</small>
                     <h3>{p.title}</h3>
-                    <span>Click to flip ↻</span>
+                    <span>Click to flip <Arrow dir="refresh" /></span>
                   </div>
                 </div>
                 <div className="flip-back">
@@ -93,7 +95,7 @@ export default function Work() {
                       <li key={pt}>{pt}</li>
                     ))}
                   </ul>
-                  <span className="flip-hint">Click to flip back ↻</span>
+                  <span className="flip-hint">Click to flip back <Arrow dir="refresh" /></span>
                 </div>
               </div>
             </article>

@@ -1,3 +1,5 @@
+import Arrow from "./Arrow";
+
 export default function Header() {
   return (
     <header className="nav">
@@ -17,7 +19,7 @@ export default function Header() {
         <a href="#work">Projects</a>
         <a href="#founders">Founders</a>
         <a href="#contact" className="nav-cta">
-          Start a project <b>↗</b>
+          Start a project <b><Arrow /></b>
         </a>
       </nav>
       <button className="menu" aria-label="Open menu">
