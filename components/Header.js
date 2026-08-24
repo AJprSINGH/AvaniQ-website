@@ -1,6 +1,7 @@
 export default function Header() {
   return (
-    <header className="nav">
+    <>
+      <header className="nav">
       <a className="logo" href="#home" aria-label="Avaniq Softwares home">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -20,10 +21,40 @@ export default function Header() {
           Start a project <b>↗</b>
         </a>
       </nav>
-      <button className="menu" aria-label="Open menu">
+      <button className="menu" aria-label="Toggle menu" aria-expanded="false">
         <i></i>
         <i></i>
       </button>
-    </header>
+      </header>
+
+      <div className="mobile-nav-backdrop" aria-hidden="true"></div>
+      <aside className="mobile-nav" aria-label="Mobile navigation">
+        <div className="mobile-nav-head">
+          <span>AVQ / MENU</span>
+          <i>02 — 10</i>
+        </div>
+        <nav>
+          <a href="#services">
+            <small>01</small>Services
+          </a>
+          <a href="#technology">
+            <small>02</small>Technology
+          </a>
+          <a href="#work">
+            <small>03</small>Projects
+          </a>
+          <a href="#founders">
+            <small>04</small>Founders
+          </a>
+          <a href="#contact" className="mobile-nav-cta">
+            Start a project <b>↗</b>
+          </a>
+        </nav>
+        <div className="mobile-nav-foot">
+          <span>AVANIQ SOFTWARES</span>
+          <span>Ideas, engineered into reality.</span>
+        </div>
+      </aside>
+    </>
   );
 }
