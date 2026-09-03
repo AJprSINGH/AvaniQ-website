@@ -83,10 +83,10 @@ export default function Testimonials() {
             <br />
             <span>Better partnership.</span>
           </h2>
-          <p>
+          {/* <p>
             Example testimonial cards — replace the names, photos, companies and
             quotes with verified client feedback before launch.
-          </p>
+          </p> */}
         </div>
 
         <div className="testimonial-grid testimonial-showcase">
@@ -114,16 +114,6 @@ export default function Testimonials() {
               </div>
             </article>
           ))}
-        </div>
-
-        <div className="testimonial-note">
-          <span>DEMO CONTENT</span>
-          <i></i>
-          <p>
-            Names, photos, companies, ratings and quotes above are placeholders
-            for the website design. Replace them with real client testimonials
-            before publishing.
-          </p>
         </div>
       </section>
     </>
